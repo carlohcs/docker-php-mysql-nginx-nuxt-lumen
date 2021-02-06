@@ -1,0 +1,28 @@
+{
+  "name": "docker-php-mysql-nginx-nuxt-lumen",
+  "version": "1.0.0",
+  "description": "Two applications: backend (with PHP/MySQL/Lumen) and frontend (Nuxt.js) with routes managed by Nginx.",
+  "main": "index.js",
+  "scripts": {
+    "image:build": "docker build --progress=tty -t carlohcs/php-mysql-nginx-nuxt-lumen:latest .",
+    "image:push": "docker push carlohcs/php-mysql-nginx-nuxt-lumen:latest",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlohcs/docker-php-mysql-nginx-nuxt-lumen.git"
+  },
+  "keywords": [
+    "PHP",
+    "MySQL",
+    "Lumen",
+    "Nuxt.js",
+    "Nginx"
+  ],
+  "author": "Carlos Henrique Carvalho de Santana <carlohcs@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlohcs/docker-php-mysql-nginx-nuxt-lumen/issues"
+  },
+  "homepage": "https://github.com/carlohcs/docker-php-mysql-nginx-nuxt-lumen#readme"
+}
