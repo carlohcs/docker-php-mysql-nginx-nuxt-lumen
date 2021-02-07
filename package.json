@@ -1,11 +1,16 @@
 {
   "name": "docker-php-mysql-nginx-nuxt-lumen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Two applications: backend (with PHP/MySQL/Lumen) and frontend (Nuxt.js) with routes managed by Nginx.",
   "main": "index.js",
   "scripts": {
-    "image:build": "docker build --progress=tty -t carlohcs/php-mysql-nginx-nuxt-lumen:latest .",
-    "image:push": "docker push carlohcs/php-mysql-nginx-nuxt-lumen:latest",
+    "build": "docker build --progress=tty -t carlohcs/php-mysql-nginx-nuxt-lumen:latest .",
+    "build:recreate": "docker build --no-cache --progress=tty -t carlohcs/php-mysql-nginx-nuxt-lumen:latest .",
+    "push": "docker push carlohcs/php-mysql-nginx-nuxt-lumen:latest",
+    "connect": "docker exec --interactive --tty php-mysql-nginx-nuxt-lumen /bin/bash",
+    "run": "docker run -d -it -p 80:80 --name=php-mysql-nginx-nuxt-lumen carlohcs/php-mysql-nginx-nuxt-lumen:latest",
+    "stop": "docker stop php-mysql-nginx-nuxt-lumen && docker container rm php-mysql-nginx-nuxt-lumen",
+    "logs": "docker logs php-mysql-nginx-nuxt-lumen",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

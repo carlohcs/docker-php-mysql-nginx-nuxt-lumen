@@ -6,6 +6,7 @@ LABEL maintainer="Carlos Henrique Carvalho de Santana<carlohcs@gmail.com>"
 # Prevent stuck problems like: "Configuring tzdata"
 # https://askubuntu.com/questions/909277/avoiding-user-interaction-with-tzdata-when-installing-certbot-in-a-docker-contai
 ENV DEBIAN_FRONTEND=noninteractive
+ENV INITRD No
 
 # Add johndoe user
 RUN useradd -u 1001 -G www-data -m johndoe
